@@ -1,0 +1,63 @@
+body {
+    margin: 0 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.hand {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 4em;
+}
+#canvas {
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: auto;
+}
+.canvas-container {
+    margin: auto;
+}
+.icon-container {
+    display: flex;
+    width: 300px;
+    margin: auto;
+}
+.icon-container > div {
+    flex: 1;
+    padding: 19px 0;
+    background-color: #ffffffff;
+}
+.icon-container > div:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+.icon-container > div > div {
+    font-size: 0.5rem;
+}
+#result {
+    font-size: 2em;
+}
+.graph-container {
+    height: 150px;
+    padding: 20px;
+    display: flex;
+}
+.output-graph {
+    flex: 1;
+    max-width: 80px;
+    display: flex;
+    flex-direction: column;
+}
+.output-graph > div {
+    align-self: flex-end;
+}
+.output-label {
+    border-top:1px solid black;
+    width: 100%;
+    text-align: center;
+}
+.graph {
+    width: 20%;
+    margin: auto auto 0 auto;
+    background: aqua;
+}

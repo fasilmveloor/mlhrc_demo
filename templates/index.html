@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="An open source Malayalam handwriting recognition system" />
+    <meta property="og:title" content="mOCR" />
+    <meta property="og:description" content="An open source Malayalam handwriting recognition system" />
+
+    <title>mOCR</title>
+
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+    <link rel="stylesheet" href={{ url_for( 'static', filename='style.css' ) }}/>
+    <style>
+        .graph-container {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hand text-primary">mOCR</div>
+
+    <canvas id="canvas" width="600" height="300" class="canvas"></canvas>
+    <div class="icon-container">
+        <div onclick="clearCanvas()">
+            <i class="fas fa-sync text-primary"></i>
+            <div>Clear</div>
+            <!-- ✘ -->
+        </div>
+        <div onclick="submitImage()">
+            <i class="fas fa-check text-success"></i>
+            <div>Submit</div>
+            <!-- ✔ -->
+        </div>
+    </div>
+    <button id="freedraw" class="btn btn-info">Pause freedraw</button>
+
+    <div id="result"></div>
+    <div class="waiting">
+        <i id="loading"></i>
+    </div>
+
+
+    <div class="graph-container">
+        <div class="output-graph">
+            <div class="graph" id="graph1"></div>
+            <div class="output-label" id="label1">1</div>
+        </div>
+        <div class="output-graph">
+            <div class="graph" id="graph2"></div>
+            <div class="output-label" id="label2">2</div>
+        </div>
+        <div class="output-graph">
+            <div class="graph" id="graph3"></div>
+            <div class="output-label" id="label3">3</div>
+        </div>
+        <div class="output-graph">
+            <div class="graph" id="graph4"></div>
+            <div class="output-label" id="label4">4</div>
+        </div>
+        <div class="output-graph">
+            <div class="graph" id="graph5"></div>
+            <div class="output-label" id="label5">5</div>
+        </div>
+    </div>
+
+    <script src={{ url_for( 'static', filename='index.js' ) }}></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.2.0/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
